@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+  body, html {
+    margin: 0;
+    overflow: hidden;
+  }
+
+    .cursor {
+      position: absolute;
+      pointer-events: none;
+      width: 100px;
+      height: 100px;
+      background-image: url("colorpicker2000.webp"); /* Replace with your image path */
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor"></div>
+
+
+  <script>
+  
+  const cursor = document.querySelector('.cursor');
+    document.addEventListener('click', (event) => {
+      cursor.style.top = `${event.clientY}px`;
+      cursor.style.left = `${event.clientX}px`;
+    });
+  
+  </script>
+
+</body>
+</html>
